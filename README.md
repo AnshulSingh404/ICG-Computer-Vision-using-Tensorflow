@@ -1,14 +1,6 @@
-# ICG-Computer-Vision-using-Tensorflow
-This repository is for submitting assignments for the project **Computer Vision using Tensorflow** offered through the SnT Council by the **IITK Consulting Group**.
+# Finacial-Predtictions-using-Time-Series
+In this project we discuss a method of valuing stock options using time series. This could serve as an alternative to the application of the Black-Scholes model. The Black-Scholes model is commonly employed to evaluate option prices and has been historically considered a reliable tool for valuing stocks. We present a statistical method involving time series analysis, where we ascertain the suitable order for the ARIMA model by utilizing the ACF and PACF plots. This approach is more comprehensive compared to other models. Instead of computing future price probabilities, assigning option values, and summing up all potential outcomes, as carried out in the formulaic approach of the Black-Scholes model, we concentrate on the initial phase of our model. This involves rigorous calculation and estimation of a sequence of outcomes along with their probabilities, aimed at estimating future option prices. We streamline the process of determining option prices to a straightforward time series forecasting technique.
 
-## Instructions for submission:
-- `Fork` this repository. A copy would be created and you would be redirected.
-- In the `Fork`, add your submission for the respective assignment. The simplest way to do this would be to go to the folder and do `Add file`->`Upload files` and select the submission from your local system.
-- Once the file has been uploaded, create a new `pull request` to mark your submission (Click on `Contribute`->`Open pull request`). 
-- In the description, please mention your IITK Roll Number.
-- Create a pull request **only during the submission window**.
-- Before the next assignment, fetch upstream to sync with the main repository.
+Our project commences by retrieving data from an additional data source, and we standardize the data to facilitate enhanced analysis of the option price data. We opt for Z-score normalization for the data. Visualization of the data holds pivotal importance as it reveals insights into linearity trends and data variance. Generating forecasts without plotting the data could lead to inaccurate outcomes. Subsequently, we manipulate the time series by decomposing it into its constituent seasonal and trend components. To evaluate the stationarity of the time series, we employ the Dickey Fuller test using the built-in function adfuller() from the Python statsmodel library. This test assesses the stationarity of the provided series and contrasts the results with a null hypothesis. The null hypothesis is rejected when the process is stationary under specific values elaborated in the Methodology section below. In cases where the series is non-stationary, as was the case in our scenario, we render it stationary through linear differencing.
 
-## Mentors:
-[Aryan Vora](https://github.com/aryan-vora23)   
-[Mandar Wayal](https://github.com/mandar7-git)
+Subsequent steps involve acquiring the ACF and PACF plots to ascertain the appropriate order for the ARIMA model.
